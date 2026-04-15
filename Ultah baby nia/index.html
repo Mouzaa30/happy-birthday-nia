@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Nia 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom, #ffd6e7, #fff);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #ff4d88;
+      margin-top: 20px;
+    }
+
+    .message {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #555;
+      padding: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .balloon {
+      position: fixed;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background: pink;
+      border-radius: 50%;
+      animation: float 10s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-120vh); }
+    }
+
+    .btn {
+      background: #ff66a3;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Happy 17th Birthday Nia Anggraeni 🎉</h1>
+
+  <div class="message">
+    <p>
+      Selamat ulang tahun yang ke-17, Nia 💖✨<br><br>
+      Hari ini bukan hanya tentang bertambahnya usia,
+      tapi tentang semua kenangan indah yang telah kamu ciptakan.
+      Kamu adalah seseorang yang selalu membawa kebahagiaan,
+      kehangatan, dan warna dalam hidup orang-orang di sekitarmu.
+      <br><br>
+      Semoga di usia yang ke-17 ini, semua impianmu perlahan menjadi nyata,
+      langkahmu selalu dimudahkan, dan hatimu selalu dipenuhi kebahagiaan.
+      Jangan pernah berubah ya, tetap jadi Nia yang ceria dan luar biasa 💕
+      <br><br>
+      Terima kasih sudah menjadi bagian dari hidup ini 🌸
+    </p>
+  </div>
+
+  <button class="btn" onclick="playMusic()">🎵 Putar Musik</button>
+
+  <audio id="music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="gallery">
+    <img src="Nia Mouza.jpeg">
+    <img src="Foregie.jpeg">
+    <img src="Foregie 2.jpeg">
+    <img src="Foregie 3.jpeg">
+    <img src="Foregie 4.jpeg">
+    <img src="Foregie5.jpeg">
+    <img src="Foregie 6.jpeg">
+  </div>
+
+  <script>
+    function playMusic() {
+      document.getElementById('music').play();
+    }
+
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * window.innerWidth + 'px';
+      balloon.style.background = ['#ff99cc','#ff66a3','#ffb3d9'][Math.floor(Math.random()*3)];
+      document.body.appendChild(balloon);
+
+      setTimeout(() => balloon.remove(), 10000);
+    }
+
+    setInterval(createBalloon, 500);
+  </script>
+
+</body>
+</html>
+  
